@@ -24,7 +24,7 @@ gulp.task("jade", function(event) {
 });
 
 gulp.task("stylus", function(event) {
-  return gulp.src("css/*.styl").pipe(stylus({
+  return gulp.src("css/app.styl").pipe(stylus({
     style: "compressed"
   })).pipe(gulp.dest(destinations.css));
 });
