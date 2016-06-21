@@ -1,0 +1,22 @@
+{
+  "name": "ludvig-portfolio",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "Tristan Edwards <tristan.edwards@me.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/LudvigOeberg/ludvigoberg.me",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0"
+  }
+}
