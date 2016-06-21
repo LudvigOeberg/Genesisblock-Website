@@ -1,0 +1,240 @@
+@import 'nib'
+
+@import '_normalize'
+@import '_mixins'
+
+@font-face
+  font-family Sentinel
+  src url('/fonts/sentinel-book.otf') format('opentype')
+  font-weight 500
+@font-face
+  font-family Sentinel
+  src url('/fonts/sentinel-medium.otf') format('opentype')
+  font-weight 700
+
+@font-face
+  font-family Avenir-Next
+  src url('/fonts/avenirnext-regular.ttf') format('truetype')
+  font-weight 500
+@font-face
+  font-family Avenir-Next
+  src url('/fonts/avenirnext-medium.ttf') format('truetype')
+  font-weight 700
+
+.clearfix
+  clear both
+
+body
+  text-align center
+  font-family Avenir-Next
+  retina-bg("/images/connections-bottom")
+  background-repeat no-repeat
+  background-position top center
+
+header
+  fixed top 0 left 0 right 0
+  padding 12px 34px
+  z-index 3
+  background-color transparent
+  transition background-color 0.3s
+  &.solid
+    background-color #929DB8
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+
+  .logo
+    background-image url("/images/genesis-block-logo.svg")
+    width 286px
+    height 35px
+
+  @media all and (max-width: 500px)
+    padding 12px 0
+    .logo
+      margin: 0 auto;
+
+section.top
+  background-image: linear-gradient(-180deg, #9EA7BB 0%, #8795B4 100%);
+  height 578px
+  color white
+  position relative
+  &::before
+    content ""
+    absolute top 0 left 0 right 0 bottom 0
+    retina-bg("/images/connections-top")
+    background-position top center
+  &::after
+    content ""
+    height 57px
+    absolute left 0 right 0 bottom -57px
+    background-image: linear-gradient(-180deg, #A8B2C8 0%, rgba(#A8B2C8, 0) 100%);
+
+  *
+    position relative
+    z-index 2
+
+  h1
+    font-family Sentinel
+    font-size 65px
+    max-width 514px
+    margin: auto;
+    padding-top: 200px;
+    @media all and (max-width: 550px)
+      font-size: 50px;
+      margin: 0 20px;
+
+  a.mail
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 7px 15px;
+    font-size: 18px;
+    margin-top: 40px;
+    display: inline-block;
+
+.page-container
+  max-width 895px
+  margin 0 auto
+  @media all and (max-width: 800px)
+    padding 0 10px
+
+section.features
+
+  ul
+    margin 115px auto
+    @media all and (max-width: 800px)
+      margin 115px 20px
+
+    li
+      width 50%
+      width: calc(50% - 2px);
+      display: inline-block;
+      margin-top: 55px;
+      vertical-align top
+      @media all and (max-width: 800px)
+        width 100%
+
+      .icon
+        size 68px
+        border 1px solid #ADB5CA
+        border-radius 50%
+        float left
+        background-position center center
+        background-repeat no-repeat
+        &.education
+          retina-bg("/images/education-icon")
+        &.research
+          retina-bg("/images/research-icon")
+        &.strategy
+          retina-bg("/images/strategy-icon")
+        &.presentation
+          retina-bg("/images/presentation-icon")
+
+      .info
+        float left
+        margin-left 19px
+        color #7C8392
+        text-align left
+        max-width: calc(100% - 193px);
+        @media all and (max-width: 800px)
+          max-width: calc(100% - 90px);
+
+        h2
+          font-family Sentinel
+          margin-bottom 11px
+
+        p
+          font-size: 14px;
+          color: #9FA3AB;
+
+section.founder
+  background-color: #5F6F71;
+  color white
+  padding-top 40px
+  position relative
+  padding-bottom 30px
+  &::before
+    content ""
+    absolute top -30px left 0 right 0
+    background-image url("/images/transition.svg")
+    height 32px
+    background-position center
+
+  .avatar
+    size 126px
+    retina-bg("/images/avatar", "jpg")
+    border-radius 50%
+    background-size 105%
+    background-position center center
+    float left
+    margin-right 40px
+    @media all and (max-width: 720px)
+      display block
+      float: none;
+      margin: 0 auto;
+
+  .info-box
+    float left
+    text-align left
+    @media all and (max-width: 720px)
+      float none
+      text-align: center;
+      margin-top: 20px;
+
+  p
+    font-size: 14px;
+    color: rgba(255,255,255,0.70);
+
+  h2
+    font-family: Sentinel
+    font-size: 27px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+
+  h3
+    font-size: 15px;
+
+  .learn
+    padding 6px 16px
+    border 2px solid white
+    border-radius 5px
+    font-size 14px
+    display: inline-block;
+    margin-top: 17px;
+
+footer
+  background-color: #484F55;
+  color white
+  padding-bottom 50px
+
+  .copyright,
+  .social
+    padding-top 70px
+
+  .copyright
+    float left
+    margin-left 20px
+    .logo
+      background-image url("/images/genesis-block-logomark.svg")
+      width 30px
+      height 35px
+      display inline-block
+      vertical-align: middle;
+      margin-right: 13px;
+
+  .social
+    float right
+    a
+      size 30px
+      display inline-block
+      margin 0 15px
+      background-size center center
+      background-repeat no-repeat
+      &.facebook
+        background-image url("/images/facebook-icon.svg")
+      &.twitter
+        background-image url("/images/twitter-icon.svg")
+      &.linkedin
+        background-image url("/images/linkedin-icon.svg")
+
+  @media all and (max-width: 600px)
+    .copyright,
+    .social
+      float none

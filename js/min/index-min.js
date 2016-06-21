@@ -1,0 +1,1 @@
+$(window).scroll(function(){var s=$(window).scrollTop(),l=0>=400-s;l&&!$("html").hasClass("touch")?$("header").addClass("solid"):$("header").removeClass("solid")});
