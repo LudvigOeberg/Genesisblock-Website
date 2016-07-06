@@ -429,11 +429,14 @@ section.founder::before {
   content: "";
   position: absolute;
   top: -30px;
-  left: 0;
+  left: -20px;
   right: 0;
   background-image: url("/images/transition.svg");
   height: 32px;
   background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
 }
 section.founder .avatar {
   width: 126px;
